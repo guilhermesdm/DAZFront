@@ -17,7 +17,7 @@ function cardTemplate(game){
   </li>`
 }
 
-// Search by game name
+// Search game by name
 function search(){
   let searchButton = document.getElementById('searchButton')
   searchButton.addEventListener('keyup', searchGame)
@@ -41,6 +41,7 @@ function search(){
   }
 }
 
+// Filter the list by genre
 async function filterGenre(genre){
   const gameList = await getGameList()
   const filteredGameList = gameList.filter(game => game.genre.includes(genre))
@@ -51,6 +52,7 @@ async function filterGenre(genre){
   })
 }
 
+// Filter the list by developers
 async function filterDeveloper(developers){
   const devList = await getGameList()
   const filteredDeveloperList = devList.filter(dev => dev.developers.includes(developers)) 
@@ -61,6 +63,7 @@ async function filterDeveloper(developers){
   })
 }
 
+// Filter the list by publishers
 async function filterPublisher(publishers){
   const publishList = await getGameList()
   const filteredPublisherList = publishList.filter(publish => publish.publishers.includes(publishers))
@@ -71,6 +74,7 @@ async function filterPublisher(publishers){
   })
 }
 
+// Reset the list
 async function cleanFilter(){
   const gameList = await getGameList()
   const $gameList = document.getElementById("games")
