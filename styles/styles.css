@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #212224;
+}
+
+.title{
+    color: white;
+    text-align: center;
+}
+
+.filter{
+    width: 40%;
+    justify-content: space-between;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+}
+
+#searchButton{
+    color: white;
+}
+
+.menu{
+    margin: 0px auto;
+    width: 800px;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+}
+
+.menu > li{
+    box-shadow: 5px 7px 5px -1px rgba(0,0,0,0.15);
+    background: #27282c;
+    float: left;
+    position: relative;
+}
+
+.menu span{
+    display: flex;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu li:hover{
+    background: #50d7c9;
+    cursor: pointer;
+}
+
+.menu > li > span{
+    padding: 1em 2em;
+}
+
+.menu > li > span:hover{
+    color: black;
+}
+
+.submenu{
+    position: absolute;
+    width: 200px;
+    left: 50%; margin-left: -100px;
+    transform-origin: left top;
+}
+
+.submenu li{
+    background-color: #323438;
+    position: relative;
+    overflow: hidden;
+}
+
+.submenu > li > span{
+    padding: 1em 2em;
+}
+
+.submenu > li > span:hover{
+    color: black;
+}
+
+.submenu,
+.submenu li{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.submenu li {
+    transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li{
+    opacity: 1;
+    visibility: visible;
+}
+
+#games{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.games-card{
+    box-shadow: 5px 7px 5px -1px rgba(0,0,0,0.15);
+    cursor: pointer;
+    width: 220px;
+    padding: 10px;
+    margin: 7px;
+    color: white;
+    background: #27282c;
+    border-radius: 8px;
+}
+
+.games-card:hover{
+    background: #2f3035;
+}

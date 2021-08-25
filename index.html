@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>DAZ Front</title>
+</head>
+<body>
+    <h1 class="title">Game list</h1>
+    
+    <div class="filter">
+        <input type="text" id="searchButton" placeholder="Search for a game...">
+    </div>
+        <ul class="menu cf">
+            <li>
+                <span onclick="cleanFilter()" style="font-size: 12.5px;"><i data-feather="x-circle" ></i></span>
+                <ul class="submenu">
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <span>Genre</span>
+                <ul class="submenu">
+                    <li onclick="filterGenre('Party')"><span>Party</span></li>
+                    <li onclick="filterGenre('Action')"><span>Action</span></li>
+                    <li onclick="filterGenre('Puzzle')"><span>Puzzle</span></li>
+                    <li onclick="filterGenre('Adventure')"><span>Adventure</span></li>
+                    <li onclick="filterGenre('Survival')"><span>Survival</span></li>
+                </ul>
+            </li>
+            <li>
+                <span>Developer</span>
+                <ul class="submenu">
+                    <li><span onclick="filterDeveloper('Lucid Sheep Games')">Lucid Sheep Games</span></li>
+                    <li><span onclick="filterDeveloper('Ink Stains Games')">Ink Stains Games</span></li>
+                    <li><span onclick="filterDeveloper('Nintendo EPD')">Nintendo EPD</span></li>
+                    <li><span onclick="filterDeveloper('Blue Print')">Blue Print</span></li>
+                    <li><span onclick="filterDeveloper('Nawia Games')">Nawia Games</span></li>
+                </ul>
+            </li>
+            <li>
+                <span>Publisher</span>
+                <ul class="submenu">
+                    <li><span onclick="filterPublisher('Lucid Sheep Games')">Lucid Sheep Games</span></li>
+                    <li><span onclick="filterPublisher('Beatshapers')">Beatshapers</span></li>
+                    <li><span onclick="filterPublisher('QubicGames')">QubicGames</span></li>
+                    <li><span onclick="filterPublisher('Skobbejak Games')">Skobbejak Games</span></li>
+                    <li><span onclick="filterPublisher('Nintendo')">Nintendo</span></li>
+                </ul>
+            </li>
+        </ul>
+
+
+    <ul id="games">    
+        
+    <script src="javascript/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>feather.replace()</script>
+</body>
+</html>
