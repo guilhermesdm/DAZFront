@@ -4,7 +4,7 @@ const baseURL = 'https://api.sampleapis.com/switch/games';
 async function getGameList(){
   const response = await fetch(baseURL)
   const gameList = await response.json()
-  return gameList
+  return gameList.slice(0, 250) // For better perfomance
 }
 
 // Creates an HTML card
