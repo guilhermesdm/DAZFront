@@ -2,9 +2,14 @@ const baseURL = "http://onesight.com.br:2052/switch/games";
 
 // This functions gets the json from API and return
 async function getGameList() {
-  const response = await fetch(baseURL);
-  const gameList = await response.json();
-  return gameList.slice(0, 250); // For better performance
+  try {
+    const response = await fetch(baseURL);
+    const gameList = await response.json();
+    return gameList.slice(0, 250); // For better performance
+  } catch (error) {
+    alert('Failed to list switch games. Try again later')
+  }
+
 }
 
 // Creates an HTML card
