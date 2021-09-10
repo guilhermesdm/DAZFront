@@ -1,22 +1,28 @@
-const dropdownGenre = document.getElementById("dropdown-link-g");
-const dropdownPublisher = document.getElementById("dropdown-link-p");
-const dropdownDeveloper = document.getElementById("dropdown-link-d");
+class Buttons {
+  constructor() {
+      this.dropdownGenre = document.getElementById("dropdown-link-g");
+      this.dropdownPublisher = document.getElementById("dropdown-link-p");
+      this.dropdownDeveloper = document.getElementById("dropdown-link-d");
 
-function toggleGenre() {
-  const genre = document.getElementById("dropdown-g");
-  genre.classList.toggle("active");
-}
+      this.dropdownDeveloper.addEventListener("click", this.toggleDeveloper);
+      this.dropdownPublisher.addEventListener("click", this.togglePublisher);
+      this.dropdownGenre.addEventListener("click", this.toggleGenre);
+    };
+  
+  toggleGenre() {
+    const genre = document.getElementById("dropdown-g");
+    genre.classList.toggle("active");
+  };
+  
+  togglePublisher() {
+    const publisher = document.getElementById("dropdown-p");
+    publisher.classList.toggle("active");
+  };
+  
+  toggleDeveloper() {
+    const developer = document.getElementById("dropdown-d");
+    developer.classList.toggle("active");
+  };
+};
 
-function togglePublisher() {
-  const publisher = document.getElementById("dropdown-p");
-  publisher.classList.toggle("active");
-}
-
-function toggleDeveloper() {
-  const developer = document.getElementById("dropdown-d");
-  developer.classList.toggle("active");
-}
-
-dropdownDeveloper.addEventListener("click", toggleDeveloper);
-dropdownPublisher.addEventListener("click", togglePublisher);
-dropdownGenre.addEventListener("click", toggleGenre);
+new Buttons()
